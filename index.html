@@ -4,22 +4,22 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script>
     var userName = prompt("What is your name?");
-    var userChoice = prompt("Do you choose rock, paper or scissors? Jared! Choose Paper!!!!!");
+    var userChoice = prompt("Do you choose rock, paper or scissors?");
     while (userChoice !== "rock" && userChoice !== "scissor" && userChoice !== "paper") {
       userChoice = prompt("Please verify your choice! (rock, paper, scissor)");
     }
     var computerChoice = Math.random();
 
-    if (computerChoice <= 1) {
+    if (computerChoice <= .33) {
         computerChoice = "rock";
     } else if (computerChoice <= 0.66) {
         computerChoice = "paper";
     } else {
         computerChoice = "scissors";
     }
-
     var compare = function(userChoice, computerChoice) {
-      if (userName === "Jared".toLowerCase) window.alert("Jared Wins");
+      if (userName.toLowerCase() === "jared") window.alert("Jared Wins!!");
+      else {
         if (userChoice  === computerChoice) {
               window.alert("The result is a tie!");
           } else if(userChoice ==="rock") {
@@ -39,12 +39,13 @@
           }
 
           else if(userChoice==="scissors") {
-              if (computerChoice==="rock") {
+              if (computerChoice==="paper") {
                   window.alert(userName + " wins!");
               } else {
-                  window.alert("scissors wins");
+                  window.alert("rock wins");
               }
           }
+        }
       };
 
     </script>
