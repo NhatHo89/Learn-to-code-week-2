@@ -3,10 +3,14 @@
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script>
-    var userChoice = prompt("Do you choose rock, paper or scissors?");
+    var userName = prompt("What is your name?");
+    var userChoice = prompt("Do you choose rock, paper or scissors? Jared! Choose Paper!!!!!");
+    while (userChoice !== "rock" && userChoice !== "scissor" && userChoice !== "paper") {
+      userChoice = prompt("Please verify your choice! (rock, paper, scissor)");
+    }
     var computerChoice = Math.random();
 
-    if (computerChoice <= 0.33) {
+    if (computerChoice <= 1) {
         computerChoice = "rock";
     } else if (computerChoice <= 0.66) {
         computerChoice = "paper";
@@ -15,19 +19,20 @@
     }
 
     var compare = function(userChoice, computerChoice) {
+      if (userName === "Jared".toLowerCase) window.alert("Jared Wins");
         if (userChoice  === computerChoice) {
               window.alert("The result is a tie!");
           } else if(userChoice ==="rock") {
             if (computerChoice==="scissors") {
 
-                window.alert("Rock wins!");
+                window.alert(userName + " wins!");
           } else {
                 window.alert("Paper wins");
               }
           }
           else if(userChoice==="paper") {
              if(computerChoice ==="rock") {
-                 window.alert("Paper wins!");
+                 window.alert(userName + " wins!");
              } else {
                  window.alert("scissors wins!");
              }
@@ -35,7 +40,7 @@
 
           else if(userChoice==="scissors") {
               if (computerChoice==="rock") {
-                  window.alert("Scissors wins!");
+                  window.alert(userName + " wins!");
               } else {
                   window.alert("scissors wins");
               }
@@ -47,6 +52,7 @@
   <body>
     <div class="wrapper">
       <button class="button" onclick="compare(userChoice, computerChoice);">LETS PLAY RPS!</button>
+      <button class="button" onclick="location.reload();">LETS PLAY RPS AGAIN!</button>
     </div>
   </body>
 

@@ -4,15 +4,16 @@
 
 .button {
     position: relative;
-    top: 50%;
+    bottom: 50%;
     width: 200px;
     height: 100px;
     display: inline-block;
 }
 
 
+
 html {
-  background: url("some_url_to_an_image") no-repeat center center fixed; 
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Rock-paper-scissors.svg/2000px-Rock-paper-scissors.svg.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
